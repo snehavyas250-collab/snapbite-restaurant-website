@@ -15,7 +15,7 @@ const addButtons = document.querySelectorAll('.menu-item button');
 addButtons.forEach(button => {
     button.addEventListener('click', function() {
         cartCount++;
-        alert(`Item added to cart! Total items: ' + cartCount);
+        alert(`Item added to cart! Total items: ${cartCount}`);
     });
 });
 
@@ -28,7 +28,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-const obeserverOptions = {
+const observerOptions = {
     threshold: 0.1
 };
 
@@ -39,11 +39,11 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.style.transform = 'translateY(0)';
         }
     });
-}, obeserverOptions);
+}, observerOptions);
 
 document.querySelectorAll('.menu-item').forEach(item => {
     item.style.opacity = '0';
     item.style.transform = 'translateY(20px)';
-    iteem.style.transition = 'all 0.5s ease';
+    item.style.transition = 'all 0.5s ease';
     observer.observe(item);
 });
