@@ -438,15 +438,15 @@ footer img {
     }
 
     .nav-links {
-        display:none;
+        display:none !important;
         background-color: #ff6347;
         z-index: 100;
     }
 
     .nav-links.show {
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 20px !important;
     }
     
     header nav li {
